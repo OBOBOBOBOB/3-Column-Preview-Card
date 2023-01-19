@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --light-gray: hsl(0, 0%, 95%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --fixed-width: 1440px;
+  --fixed-height: 789px;
+  --max-width: 991px;
+  --max-height: 700px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--light-gray);
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  background: var(--light-gray);
+
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 75%;
+  height: 70%;
+  min-height: 489px;
+  display: flex;
+}
+
+section {
+  width: 33%;
+  height: 100%;
+  padding: 4.25%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section-1 {
+  background: var(--bright-orange);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.section-2 {
+  background: var(--dark-cyan);
+}
+
+.section-3 {
+  background: var(--very-dark-cyan);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--light-gray);
+  font-size: 250%;
+  margin-top: -30%;
+}
+
+.context {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--transparent-white);
+  margin-top: -40%;
+  font-size: 105%;
+  line-height: 175%;
+}
+
+button {
+  padding: 5%;
+  background: var(--light-gray);
+  width: 60%;
+  transition: all 0.4s ease-in-out;
+}
+
+.section-1 button {
+  border: 0px solid var(--bright-orange);
+  border-radius: 50px;
+  /* width: 60%; */
+  font-size: 100%;
+}
+
+.section-2 button {
+  border: 0px solid var(--dark-cyan);
+  border-radius: 50px;
+  /* width: 60%; */
+  font-size: 100%;
+}
+
+.section-3 button {
+  border: 0px solid var(--very-dark-cyan);
+  border-radius: 50px;
+  /* width: 60%; */
+  font-size: 100%;
+}
+
+.section-1 span {
+  color: var(--bright-orange);
+}
+
+.section-2 span {
+  color: var(--dark-cyan);
+}
+
+.section-3 span {
+  color: var(--very-dark-cyan);
+}
+
+#button-1:hover {
+  background: hsl(31, 77%, 40%);
+  cursor: pointer;
+}
+
+#button-2:hover {
+  background: hsl(184, 100%, 17%);
+  cursor: pointer;
+}
+
+#button-3:hover {
+  background: hsl(179, 100%, 9%);
+  cursor: pointer;
+}
+
+button:hover span {
+  color: hsl(0, 0%, 95%);
+}
+
+button:hover {
+  transform: translateY(-0.25em);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 1rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+footer a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 991px) {
+  main {
+    width: 100vw;
+    height: 170vh;
+    background: var(--light-gray);
+    margin: 10% auto;
+
+    display: grid;
+    place-items: center;
+  }
+
+  .container {
+    width: 80%;
+    height: 100%;
+    min-height: 1050px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  section {
+    width: 100%;
+    height: 50%;
+    padding: 4.25%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 200%;
+    margin-top: 0;
+  }
+
+  .context {
+    margin-top: 0;
+  }
+
+  button {
+    padding: 2%;
+    width: 100%;
+  }
+
+  .section-1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+
+  .section-3 {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 0;
+  }
+
+  #button-1:hover {
+    background: hsl(31, 77%, 40%);
+    transform: translateY(-0.25em);
+  }
+
+  #button-1:active {
+    transform: translateY(0);
+  }
+
+  #button-1:hover span {
+    color: hsl(0, 0%, 95%);
+  }
+
+  #button-2:hover {
+    background: hsl(184, 100%, 17%);
+    transform: translateY(-0.25em);
+  }
+
+  #button-2:active {
+    transform: translateY(0);
+  }
+
+  #button-2:hover span {
+    color: hsl(0, 0%, 95%);
+  }
+
+  #button-3:hover {
+    background: hsl(179, 100%, 9%);
+    transform: translateY(-0.25em);
+  }
+
+  #button-3:active {
+    transform: translateY(0);
+  }
+
+  #button-3:hover span {
+    color: hsl(0, 0%, 95%);
+  }
+}
